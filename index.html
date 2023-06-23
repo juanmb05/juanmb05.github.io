@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tela de Casamento</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+        
+        .message {
+            font-size: 24px;
+        }
+        
+        .buttons {
+            margin-top: 20px;
+        }
+        
+        .buttons button {
+            margin: 0 10px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #imageContainer {
+            margin-top: 20px;
+        }
+        
+        img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .loveMessage {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1 class="message">Acceita namora cmg?</h1>
+        <div class="buttons">
+            <button id="yesButton">Sim</button>
+            <button id="noButton">Não</button>
+        </div>
+        <div id="imageContainer" class="hidden">
+            <h2 class="loveMessage">Eu te amo d+ mh joia</h2>
+            <img id="parabensImage" src="" alt="Parabens!">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const yesButton = document.getElementById("yesButton");
+            const noButton = document.getElementById("noButton");
+            const imageContainer = document.getElementById("imageContainer");
+            const parabensImage = document.getElementById("parabensImage");
+
+            yesButton.addEventListener("click", function() {
+                alert("Parabéns! agora estamos namorando vida!");
+                parabensImage.src = "parabens.jpg"; // Substitua com o URL da imagem
+                imageContainer.classList.remove("hidden");
+            });
+
+            noButton.addEventListener("click", function() {
+                alert("Nao eh o krai, clica no SIM nessa bagaça.");
+            });
+        });
+    </script>
+</body>
+</html>
